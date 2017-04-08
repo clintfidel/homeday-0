@@ -17,7 +17,7 @@ function fizzBuzz(num){
 
 
 
-function aritGeo (num){ 
+function aritGeo(num){ 
   if(num.length===0){
     return 0;
   }
@@ -36,3 +36,38 @@ function aritGeo (num){
     }
 
 }
+
+
+function getPrimes(n){
+  if(typeof n != 'number'){
+    return [];
+  }
+  else if(n <= []){
+    return [];
+  }
+  if(n === 2){ 
+    return [2];
+  }
+  else if(n === 3){
+    return [3];
+  }
+  var l = [];
+  var flag = 0;
+  for(var i=2; i<n; i++){
+    for(var j = 2; j< i; j++){
+      if(i%j === 0){
+        flag =1;
+        break;
+      }
+    }
+    if(flag === 0){
+      l.push(i);
+    }
+    flag = 0;
+  }
+  l.push(n);
+  return l;
+}
+
+
+

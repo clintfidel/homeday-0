@@ -86,7 +86,7 @@ describe("Determine the sequence of an array of numbers: ", function() {
 
     });
 
-    describe("Case for neither arithmetic nor geometric sequence", function() {
+    describe("Case for neither arithmetic nor geometric sequence", function(     ) {
 
       it("should return -1 for [1, 2, 3, 5, 8]", function() {
         expect(aritGeo([1, 2, 3, 5, 8])).toEqual(-1);
@@ -103,4 +103,31 @@ describe("Determine the sequence of an array of numbers: ", function() {
     });
   });
 
+describe("Get Prime Test ", function() {
+
+  it("should return [2, 3] for 3", function() {
+    expect(getPrimes(3)).toBe([3]);
+  });
+
+ it("should return [2, 3, 5] for 5", function() {
+    expect(getPrimes(5)).toBe([2, 3, 5]);
+  });
+
+  it("should return [2, 3, 5, 7] for 7", function() {
+    expect(getPrimes(7)).toBe([2, 3, 5, 7]);
+  });
+  it("should return [ 2, 3, 5, 7, 11, 13 ] for 13", function() {
+    expect(getPrimes(13)).toBe([ 2, 3, 5, 7, 11, 13 ]);
+  });
+  it("should return [ 2, 3, 5, 7, 11, 13, 19, 23 ] for 23", function() {
+    expect(getPrimes(23)).toBe([ 2, 3, 5, 7, 11, 13, 19, 23 ]);
+  });
+  it("should return [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 ] for 31", function() {
+    expect(getPrimes(31)).toBe([2, 3]);
+  });
+  it("should return [] for []", function() {
+    expect(getPrimes([])).toBe([]);
+  });
+
+});
 
