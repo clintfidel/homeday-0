@@ -105,28 +105,36 @@ describe("Determine the sequence of an array of numbers: ", function() {
 
 describe("Get Prime Test ", function() {
 
-  it("should return [2, 3] for 3", function() {
-    expect(getPrimes(3)).toBe([3]);
+  it("should return [3] for 3", function() {
+    expect(getPrimes(3)).toEqual([3]);
   });
 
  it("should return [2, 3, 5] for 5", function() {
-    expect(getPrimes(5)).toBe([2, 3, 5]);
+    expect(getPrimes(5)).toEqual([2, 3, 5]);
   });
 
   it("should return [2, 3, 5, 7] for 7", function() {
-    expect(getPrimes(7)).toBe([2, 3, 5, 7]);
+    expect(getPrimes(7)).toEqual([2, 3, 5, 7]);
   });
   it("should return [ 2, 3, 5, 7, 11, 13 ] for 13", function() {
-    expect(getPrimes(13)).toBe([ 2, 3, 5, 7, 11, 13 ]);
+    expect(getPrimes(13)).toEqual([ 2, 3, 5, 7, 11, 13 ]);
   });
   it("should return [ 2, 3, 5, 7, 11, 13, 19, 23 ] for 23", function() {
-    expect(getPrimes(23)).toBe([ 2, 3, 5, 7, 11, 13, 19, 23 ]);
+    expect(getPrimes(23)).toEqual([ 2, 3, 5, 7, 11, 13, 17, 19, 23 ]);
   });
   it("should return [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 ] for 31", function() {
-    expect(getPrimes(31)).toBe([2, 3]);
+    expect(getPrimes(31)).toEqual([ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 ]);
   });
   it("should return [] for []", function() {
-    expect(getPrimes([])).toBe([]);
+    expect(getPrimes([])).toEqual([]);
+  });
+
+  it("should return [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 54 ] for 54", function() {
+    expect(getPrimes(54)).toEqual([ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 54 ]);
+  });
+
+  it("should return [ 2, 3, 5, 7, 11, 13, 17, 18 ] for 18", function() {
+    expect(getPrimes(18)).toEqual([ 2, 3, 5, 7, 11, 13, 17, 18 ]);
   });
 
 });
