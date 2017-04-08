@@ -13,3 +13,22 @@ function fizzBuzz(num){
   }
 }
 
+function aritGeo (num){ 
+  if(num.length===0){
+    return 0;
+  }
+  var comDiff = num[1]-num[0];
+  var comRatio =num[1]/num[0] ;
+  for(var i=1; i<num.length; i++){
+    if ( num[i+1]- num[i]===comDiff && num[num.length-1]-num[num.length-2] ===comDiff){
+      return 'arithmetic';
+    }
+    else if (num[i+1]/num[i]===comRatio && num[num.length-1]/num[num.length-2] ===comDiff){
+      return 'geometric';
+    }
+    else {
+        return -1;
+      }
+    }
+
+}
